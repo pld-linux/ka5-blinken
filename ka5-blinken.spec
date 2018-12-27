@@ -1,18 +1,29 @@
-%define		kdeappsver	18.04.0
-%define		qtver		5.3.2
+%define		kdeappsver	18.12.0
+%define		qtver		5.9.0
 %define		kaname		blinken
 Summary:	Blinken
 Name:		ka5-%{kaname}
-Version:	18.04.0
+Version:	18.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
-Group:		X11/Libraries
+Group:		X11/Applications/Games
 Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ed6c2bac673f12b2f486aa9c24e377e6
+# Source0-md5:	8704b3557a68782affb34cda12bab06a
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
+BuildRequires:	Qt5Gui-devel >= 5.11.1
+BuildRequires:	Qt5Svg-devel
+BuildRequires:	Qt5Widgets-devel
 BuildRequires:	cmake >= 2.8.12
-BuildRequires:	kf5-extra-cmake-modules >= 1.4.0
+BuildRequires:	gettext-devel
+BuildRequires:	kf5-extra-cmake-modules >= 5.53.0
+BuildRequires:	kf5-kcrash-devel >= 5.46.0
+BuildRequires:	kf5-kdbusaddons-devel >= 5.46.0
+BuildRequires:	kf5-kdoctools-devel >= 5.46.0
+BuildRequires:	kf5-kguiaddons-devel >= 5.46.0
+BuildRequires:	kf5-ki18n-devel >= 5.46.0
+BuildRequires:	kf5-kxmlgui-devel >= 5.46.0
+BuildRequires:	phonon-qt5-devel
 BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
@@ -21,7 +32,18 @@ BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Blinken.
+Blinken is based on an electronic game released in 1978, which
+challenges players to remember sequences of increasing length. On the
+face of the device, there are 4 different color buttons, each one with
+their own distinctive sound. These buttons light up randomly, creating
+the sequence that the player must then recall. If the player is
+successful in remembering the sequence of lights in the correct order,
+he advances to the next stage, where an identical sequence with one
+extra step is presented. If the player makes a mistake, the game is
+lost, and the player must start again from the beginning. The goal is
+to get a high score - each step in the sequence is worth one point, so
+correct entry of a sequence of 8 lights is worth 8 points on the high
+score table.
 
 %prep
 %setup -q -n %{kaname}-%{version}
