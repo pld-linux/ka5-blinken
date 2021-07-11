@@ -47,6 +47,18 @@ to get a high score - each step in the sequence is worth one point, so
 correct entry of a sequence of 8 lights is worth 8 points on the high
 score table.
 
+%description -l pl.UTF-8
+Blinken jest oparty na grze elektronicznej wydanej w 1978 roku.
+Wyzwaniem dla gracza jest zapamiętywanie coraz dłuższych sekwencji. Na
+urządzeniu są 4 różne kolorowe przyciski, każdy z odróżnialnym
+dźwiękiem. Przyciski te zapalają się losowo, tworząc sekwencję, którą
+gracz musi zapamiętać i odtworzyć. Jeśli mu się to uda, przechodzi do
+następnego poziomu, gdzie do identycznej sekwencji dodawany jest jeden
+element. Jeśli gracz się pomyli, przegrywa i musi zacząć od początku.
+Celem jest uzyskanie rekordu, każdy krok w sekwencji jest warty 1
+punkt, więc prawidłowe powtórzenie 8 świateł jest warte 8 punktów w
+tabeli rekordów.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
