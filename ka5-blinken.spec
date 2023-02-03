@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.12.1
+%define		kdeappsver	22.12.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		blinken
 Summary:	Blinken
 Name:		ka5-%{kaname}
-Version:	22.12.1
+Version:	22.12.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	bac673c964ffcbe715773f6f9a878a99
+# Source0-md5:	e7dbe82e67c3cb247a3b19339824a996
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
